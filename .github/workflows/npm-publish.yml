@@ -17,7 +17,9 @@ jobs:
         # Use the ID's from the secrets below
           client-id: ${{ secrets.CODIO_DEMO_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_DEMO_SECRET_ID }}
-          domain: codio.co.uk
+      - domain:
+          description: 'api domain uk'
+          default: 'codio.co.uk'    
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout
         uses: actions/checkout@v1
