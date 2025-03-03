@@ -17,9 +17,7 @@ jobs:
         # Use the ID's from the secrets below
           client-id: ${{ secrets.CODIO_DEMO_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_DEMO_SECRET_ID }}
-      - domain:
-          description: 'api domain uk'
-          default: 'codio.co.uk'    
+          domain: codio.co.uk
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout
         uses: actions/checkout@v1
@@ -37,5 +35,6 @@ jobs:
           # The course and assignment id of the codio assignment (see below)
           course-id: 9185e3ae4079d481c311797e846fcf43
           assignment-id: e39c814e2b3dd6ccfdff350a7fbcbccb
+          domain: codio.co.uk
           zip: ../data.tar.gz
           changelog: ${{ github.event.head_commit.message }}
