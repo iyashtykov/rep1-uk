@@ -1,0 +1,31 @@
+{
+	"source": {
+		"arePartialPointsAllowed": true,
+		"bloomsObjectiveLevel": "2",
+		"isCollapsedOnStart": false,
+		"learningObjectives": "",
+		"metadata": {
+			"files": [],
+			"opened": [],
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Grade Book"
+				},
+				{
+					"name": "Content",
+					"value": "gradebook"
+				},
+				{
+					"name": "Programming Language",
+					"value": "gradebook"
+				}
+			]
+		},
+		"name": "gradebook2",
+		"points": 100,
+		"showName": true
+	},
+	"taskId": "grade-book-2427660357",
+	"type": "grade-book"
+}

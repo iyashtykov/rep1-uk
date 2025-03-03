@@ -1,0 +1,36 @@
+{
+	"source": {
+		"arePartialPointsAllowed": true,
+		"bloomsObjectiveLevel": "",
+		"command": "python default_format_partial_v2.py",
+		"guidance": "answer and rationale",
+		"instructions": "run",
+		"learningObjectives": "",
+		"metadata": {
+			"files": [
+				"file.js"
+			],
+			"opened": [
+				{
+					"content": "file.js",
+					"panelNumber": 0,
+					"type": "file"
+				}
+			],
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Advanced Code Test"
+				}
+			]
+		},
+		"name": "advanced code test partial v2 default format",
+		"oneTimeTest": false,
+		"points": 100,
+		"showGuidanceAfterResponse": false,
+		"showName": true,
+		"timeoutSeconds": 40
+	},
+	"taskId": "test-1034057722",
+	"type": "test"
+}

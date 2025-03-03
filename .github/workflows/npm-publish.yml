@@ -1,0 +1,39 @@
+name: codio-publish
+# Run this workflow every time a new commit pushed to your repository branch noted below
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+  # Set the type of machine to run on - do not change this. Any warnings you may see in workflow actions can be ignored
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log into Codio
+        id: codio-login
+        uses: codio/codio-auth-action@master
+        with:
+        # Use the ID's from the secrets below
+          client-id: ${{ secrets.CODIO_DEMO_CLIENT_ID }}
+          secret-id: ${{ secrets.CODIO_DEMO_SECRET_ID }}
+          domain: codio.co.uk
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cleanup
+        run: rm -rf .github README.md
+      # Recommend you use tar.gz . zip is allowed but it doesn't handle permissions correctly. See example below on how zip can be used
+      - name: Archive
+        run: tar czf ../data.tar.gz .
+
+      - name: Publish to Codio
+        uses: codio/codio-assignment-publish-action@master
+        with:
+          token: ${{ steps.codio-login.outputs.token }}
+          # The course and assignment id of the codio assignment (see below)
+          course-id: 9185e3ae4079d481c311797e846fcf43
+          assignment-id: e39c814e2b3dd6ccfdff350a7fbcbccb
+          zip: ../data.tar.gz
+          changelog: ${{ github.event.head_commit.message }}

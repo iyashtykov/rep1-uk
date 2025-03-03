@@ -1,0 +1,24 @@
+{
+	"allowGuideClose": false,
+	"collapsedOnStart": false,
+	"hideBackToDashboard": false,
+	"hideMenu": false,
+	"hideSectionsToggle": false,
+	"lexikonTopic": "",
+	"order": [
+		"standard-code-tests-9c86",
+		"advanced-code-tests-83a9",
+		"multi-choices-970d",
+		"fibs-97e9",
+		"free-texts-0f05",
+		"free-text-auto-8af9",
+		"other-assessments-d420"
+	],
+	"protectLayout": false,
+	"scripts": [],
+	"suppressPageNumbering": false,
+	"theme": "light",
+	"title": "rep1",
+	"useMarkAsComplete": true,
+	"useSubmitButtons": true
+}
